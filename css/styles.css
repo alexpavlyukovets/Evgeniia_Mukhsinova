@@ -157,11 +157,21 @@ header {
 
 #about {
     background: #2E2E2E;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    flex-direction: row;
 }
 
-#about_content {
-    display: flex;
-    flex-direction: row;
+.about_wrap_h2_and_p {
+    max-width: 600px;
+    /* ограничиваем текст */
+    margin-right: 20px;
+    /* отступ от картинки */
+}
+
+#h2_about {
+    padding-bottom: 50px;
 }
 
 #about2 {
@@ -209,8 +219,8 @@ footer {
 
 /* classes*/
 .img_container {
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 400px;
     background-image: url('/img/IMG_3756.jpg');
     background-size: cover;
     /* подгонка по размеру контейнера */
@@ -218,6 +228,7 @@ footer {
     /* центрирование */
     background-repeat: no-repeat;
     /* без повторов */
+    flex-shrink: 0;
 }
 
 
