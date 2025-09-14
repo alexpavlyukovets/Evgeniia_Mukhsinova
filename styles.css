@@ -1,0 +1,245 @@
+:root {
+    --nav-height: 64px;
+    /* высота навбара */
+}
+
+/* --- reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* --- фиксированная навигация --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    background: linear-gradient(90deg, #EB5959, #98B8F3, #E394C7, #F4D85D);
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 10px;
+    display: inline-block;
+}
+
+/* --- обёртка, в которой находятся "страницы" --- */
+.wrap {
+    /* НЕ делаем overflow у обёртки — скроллит документ (viewport) */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- все прямые дети .wrap будут sticky под навбаром --- */
+.wrap>* {
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(var(--nav-height));
+    /* прилипаем под навбар */
+    height: 100vh;
+    /* каждая "страница" — 100vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    background-clip: padding-box;
+}
+
+.wrap>header {
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.wrap h1 {
+    font-size: 5em;
+}
+
+.wrap h2 {
+    font-size: 8em;
+}
+
+
+/* --- задаём порядок слоёв: более поздние блоки накладываются поверх ранних --- */
+/* первая нотация соответствует порядку внутри .wrap */
+.wrap>*:nth-child(1) {
+    z-index: 1;
+}
+
+/* header */
+.wrap>*:nth-child(2) {
+    z-index: 2;
+}
+
+/* about */
+.wrap>*:nth-child(3) {
+    z-index: 3;
+}
+
+/* about2 */
+.wrap>*:nth-child(4) {
+    z-index: 4;
+}
+
+/* magazines */
+.wrap>*:nth-child(5) {
+    z-index: 5;
+}
+
+/* magazines2 */
+.wrap>*:nth-child(6) {
+    z-index: 6;
+}
+
+/* illustrations */
+.wrap>*:nth-child(7) {
+    z-index: 7;
+}
+
+/* illustrations2 */
+.wrap>*:nth-child(8) {
+    z-index: 8;
+}
+
+/* other */
+.wrap>*:nth-child(9) {
+    z-index: 9;
+}
+
+/* other2 */
+.wrap>*:nth-child(10) {
+    z-index: 10;
+}
+
+/* footer (contacts) */
+
+/* --- фоны для наглядности --- */
+header {
+    background: linear-gradient(90deg, #EB5959, #98B8F3, #E394C7, #F4D85D);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#about {
+    background: #2E2E2E;
+}
+
+#about_content {
+    display: flex;
+    flex-direction: row;
+}
+
+#about2 {
+    background: #D9D9D9;
+}
+
+#magazines {
+    background: #98B8F3;
+    ;
+}
+
+#magazines2 {
+    background: #D9D9D9;
+    ;
+}
+
+#illustrations {
+    background: #EB5959;
+    ;
+    color: #fff;
+}
+
+#illustrations2 {
+    background: #D9D9D9;
+    color: #fff;
+}
+
+#other {
+    background: #E394C7;
+    ;
+    color: #fff;
+}
+
+#other2 {
+    background: #FFFF;
+    color: #fff;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    flex-direction: column;
+}
+
+
+/* classes*/
+.img_container {
+    width: 300px;
+    height: 200px;
+    background-image: url('/img/IMG_3756.jpg');
+    background-size: cover;
+    /* подгонка по размеру контейнера */
+    background-position: center;
+    /* центрирование */
+    background-repeat: no-repeat;
+    /* без повторов */
+}
+
+
+/* --- адаптив --- */
+@media (max-width: 700px) {
+    :root {
+        --nav-height: 56px;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    p {
+        padding: 0 8px;
+    }
+
+    .portfolio {
+        font-size: 5em;
+    }
+}
+
+/* --- предупреждение: transform/overflow на предках ломают sticky --- */
+/* Если вы применяете transform или overflow на родителях .wrap, sticky может перестать работать. */
