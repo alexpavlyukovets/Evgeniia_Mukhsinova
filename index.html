@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио — Мухсинова Женя</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -41,7 +44,7 @@
                     университета, поэтому пока не рассматриваю возможность переезда в другой город/страну.</p>
             </div>
             <div class="photo">
-                <img src="/img/IMG_3756.jpg" alt="Мухсинова Женя">
+                <img src="img/IMG_3756.jpg" alt="Мухсинова Женя">
             </div>
         </section>
 
@@ -71,8 +74,47 @@
 
         <!--Illustrations Content-->
         <section id="illustrations_content" class="section illustrations_content">
-            <h2>Иллюстрации (24–25)</h2>
-            <p>Работы в стиле коллажа, авторские иллюстрации.</p>
+            <div id="carouselIllustrations" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="illustrations_content_img/Вставленное изображение.jpg" class="d-block w-100"
+                            alt="Иллюстрация 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="illustrations_content_img/Вставленное изображение (2).jpg" class="d-block w-100"
+                            alt="Иллюстрация 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="illustrations_content_img/Вставленное изображение (3).jpg" class="d-block w-100"
+                            alt="Иллюстрация 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="illustrations_content_img/Вставленное изображение (4).jpg" class="d-block w-100"
+                            alt="Иллюстрация 4">
+                    </div>
+                </div>
+
+                <!-- Стрелки навигации -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIllustrations"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущая</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselIllustrations"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующая</span>
+                </button>
+
+                <!-- Индикация -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselIllustrations" data-bs-slide-to="0" class="active"
+                        aria-current="true"></button>
+                    <button type="button" data-bs-target="#carouselIllustrations" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselIllustrations" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselIllustrations" data-bs-slide-to="3"></button>
+                </div>
+            </div>
         </section>
 
         <!-- Разное -->
@@ -97,6 +139,9 @@
 
     </div>
     <script src="/sticky.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 
