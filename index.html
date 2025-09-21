@@ -2,121 +2,102 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sticky stacking — обновлённая структура</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио — Мухсинова Женя</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Навбар: About, Журналы, Иллюстрации, Разное, Контакты -->
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#magazines">Журналы</a></li>
-      <li><a href="#illustrations">Иллюстрации</a></li>
-      <li><a href="#other">Разное</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-  </nav>
+    <nav class="nav">
+        <a href="#about">обо мне</a>
+        <a href="#magazines">журналы</a>
+        <a href="#illustrations">иллюстрации</a>
+        <a href="#other">разное</a>
+        <a href="#contacts">контакты</a>
+    </nav>
+    <div class="wrapper">
 
-  <div class="wrap">
-    <!-- Header (100vh) -->
-    <header id="home">
-      <div>
-        <h1 class="muha">Мухсинова Женя</h1>
-        <h2 class="portfolio">Portfolio</h2>
-      </div>
-    </header>
+        <!-- Обложка -->
+        <section class="section cover">
+            <div class="cover-content">
+                <h1>Мухсинова Женя</h1>
+                <h2>Портфолио</h2>
+            </div>
+        </section>
 
-    <!-- About (100vh) — доступен в навбаре -->
-    <section id="about">
-      <div class="about_wrap_h2_and_p">
-        <h2 id="h2_about">обо мне</h2>
-        <p>Привет!
+        <!-- Обо мне -->
+        <section id="about" class="section about">
+            <div class="text">
+                <h2>Обо мне</h2>
+                <p>Привет!<br><br>
+                    Меня зовут Женя. Я родилась 14.08.2004 г. <br>
+                    Я студентка факультета “Графический дизайн в рекламе” Государственного университета промышленных
+                    технологий и дизайна, расположенного в Санкт-Петербурге, России.<br><br>
+                    Меня вдохновляют мода, история дизайна и современные тенденции в искусстве — я стараюсь сочетать
+                    эстетику и функциональность в каждом проекте.<br><br>
+                    Я люблю экспериментировать и работать в команде.<br><br>
+                    Я готова к работе в офисе, к удалённой работе и в смешанном режиме. Сейчас я заканчиваю третий курс
+                    университета, поэтому пока не рассматриваю возможность переезда в другой город/страну.</p>
+            </div>
+            <div class="photo">
+                <img src="photo.jpg" alt="Мухсинова Женя">
+            </div>
+        </section>
 
-          Меня зовут Женя. Я родилась 14.08.2004г.
-          Я студентка факультета “графический дизайн в рекламе” Государственного университета промышленных технологий
-          и
-          дизайна, расположенного в Санкт-Петербурге, России.
+        <!-- Резюме -->
+        <section class="section resume">
+            <h2>Резюме</h2>
+            <p>Здесь будет список навыков, опыта и образования.</p>
+        </section>
 
-          Меня вдохновляют мода, история дизайна и современные тенденции в искусстве – я стараюсь сочетать эстетику и
-          функциональность в каждом проекте.
+        <!-- Журналы -->
+        <section id="magazines" class="section magazines">
+            <h2>Журналы (23–25)</h2>
+            <p>Макеты журналов, примеры страниц.</p>
+        </section>
 
-          Я люблю эксперименты и работать в команде.
+        <!--Magazines content-->
+        <section id="magazines_content" class="section magazines_content">
+            <h2>Журналы (23–25)</h2>
+            <p>Макеты журналов, примеры страниц.</p>
+        </section>
 
-          Я готова к работе в офисе, к удалённой работе
-          и в смешанном режиме. Сейчас я заканчиваю третий
-          курс университета, поэтому пока не рассматриваю возможность переезда в другой город/страну.</p>
-      </div>
-      <div class="img_container"></div>
-    </section>
+        <!-- Иллюстрации -->
+        <section id="illustrations" class="section illustrations">
+            <h2>Иллюстрации (24–25)</h2>
+            <p>Работы в стиле коллажа, авторские иллюстрации.</p>
+        </section>
 
-    <!-- About2 (100vh) — подробная информация, НЕ в навбаре -->
-    <section id="about2">
-      <div>
-        <h2>About — подробности</h2>
-        <p>Здесь размещается расширенная информация. В списке навбара её не будет.</p>
-      </div>
-    </section>
+        <!--Illustrations Content-->
+        <section id="illustrations_content" class="section illustrations_content">
+            <h2>Иллюстрации (24–25)</h2>
+            <p>Работы в стиле коллажа, авторские иллюстрации.</p>
+        </section>
 
-    <!-- Magazines (100vh) — просто заголовок -->
-    <section id="magazines">
-      <div>
-        <h2>Журналы</h2>
-        <p>Это страница "Журналы".</p>
-      </div>
-    </section>
+        <!-- Разное -->
+        <section id="other" class="section other">
+            <h2>Разное (24)</h2>
+            <p>Другие проекты, шрифты, каллиграфия.</p>
+        </section>
 
-    <!-- Magazines2 (100vh) — где будут размещены журналы -->
-    <section id="magazines2">
-      <div>
-        <p>Здесь будут размещаться карточки/список журналов.</p>
-      </div>
-    </section>
+        <!--Other Content-->
+        <section id="other_content" class="section other_content">
+            <h2>Разное (24)</h2>
+            <p>Другие проекты, шрифты, каллиграфия.</p>
+        </section>
 
-    <!-- Illustrations (100vh) — просто заголовок -->
-    <section id="illustrations">
-      <div>
-        <h2>Иллюстрации</h2>
-        <p>Страница с надписью "Иллюстрации".</p>
-      </div>
-    </section>
+        <!-- Контакты -->
+        <section id="contacts" class="section contacts">
+            <h2>Контакты</h2>
+            <p>Email: example@mail.com<br>
+                Telegram: @username<br>
+                Instagram: @profile</p>
+        </section>
 
-    <!-- Illustrations2 (100vh) — где будут размещаться иллюстрации -->
-    <section id="illustrations2">
-      <div>
-        <p>Здесь будут карточки и сетки с иллюстрациями.</p>
-      </div>
-    </section>
-
-    <!-- Other (100vh) — просто заголовок -->
-    <section id="other">
-      <div>
-        <h2>Разное</h2>
-        <p>Страница "Разное".</p>
-      </div>
-    </section>
-
-    <!-- Other2 (100vh) — где будет размещаться разное -->
-    <section id="other2">
-      <div>
-        <p>Здесь разместим дополнительные материалы.</p>
-      </div>
-    </section>
-
-    <!-- Footer / Contacts (100vh) -->
-    <footer id="contacts">
-      <div>
-        <h2>Контакты</h2>
-        <p>email@example.com | +7 999 123 45 67</p>
-        <p>
-          <a href="#" style="color:#fff;text-decoration:underline;">Instagram</a> |
-          <a href="#" style="color:#fff;text-decoration:underline;">Facebook</a>
-        </p>
-      </div>
-    </footer>
-  </div>
+    </div>
+    <script src="/sticky.js"></script>
 </body>
+
 
 </html>

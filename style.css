@@ -1,0 +1,246 @@
+/* Сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #111;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Навигация */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #f56b6b, #ae6bff, #ffe066);
+    z-index: 9999;
+}
+
+.nav a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    opacity: 0.6;
+}
+
+/* Общий стиль секций с sticky */
+.section {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    /* будет корректироваться через JS */
+    padding: 60px;
+}
+
+/* Стили отдельных секций */
+.cover {
+    background: linear-gradient(90deg, #f56b6b, #ae6bff, #ffe066);
+    color: #111;
+}
+
+.about {
+    background: #222;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.resume {
+    background: #eee;
+    color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.magazines {
+    background: #4a90e2;
+    color: #fff;
+}
+
+.magazines_content {
+    background: #eee;
+    color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.illustrations {
+    background: #d0021b;
+    color: #fff;
+}
+
+.illustrations_content {
+    background: #eee;
+    color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.other {
+    background: #9013fe;
+    color: #fff;
+}
+
+.other_content {
+    background: #eee;
+    color: #111;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.contacts {
+    background: #333;
+    color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+
+    .about,
+    .resume,
+    .magazines_content,
+    .illustrations_content,
+    .other_content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Базовые стили, sticky и цвета оставляем как раньше */
+
+/* Адаптивность */
+
+/* 1. Большие десктопы > 1440px */
+@media (min-width: 1441px) {
+
+    .about,
+    .resume,
+    .magazines_content,
+    .illustrations_content,
+    .other_content {
+        grid-template-columns: 1fr 1fr;
+        /* 2 колонки */
+        gap: 50px;
+    }
+
+    .cover-content h2 {
+        font-size: 96px;
+    }
+
+    .about h2,
+    .resume h2 {
+        font-size: 36px;
+    }
+}
+
+/* 2. Стандартные десктопы 1024px – 1440px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+    .about,
+    .resume,
+    .magazines_content,
+    .illustrations_content,
+    .other_content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .cover-content h2 {
+        font-size: 72px;
+    }
+
+    .about h2,
+    .resume h2 {
+        font-size: 32px;
+    }
+}
+
+/* 3. Планшеты 768px – 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .about,
+    .resume,
+    .magazines_content,
+    .illustrations_content,
+    .other_content {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .cover-content h2 {
+        font-size: 56px;
+    }
+
+    .about h2,
+    .resume h2 {
+        font-size: 28px;
+    }
+}
+
+/* 4. Мобильные < 768px */
+@media (max-width: 767px) {
+
+    .about,
+    .resume,
+    .magazines_content,
+    .illustrations_content,
+    .other_content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .cover-content h2 {
+        font-size: 48px;
+    }
+
+    .cover-content h1 {
+        font-size: 24px;
+    }
+
+    .about h2,
+    .resume h2 {
+        font-size: 24px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
