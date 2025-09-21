@@ -165,19 +165,27 @@ body {
 
 /* Все точки */
 #carouselIllustrations .carousel-indicators button {
-    width: 20px;           /* ширина */
-    height: 8px;           /* высота — прямоугольная форма */
-    border-radius: 4px;    /* скругление, чтобы было похоже на «капельку» */
-    background-color: rgba(0,0,0,1);  /* полупрозрачные для неактивных */
-    margin: 0 5px;         /* отступ между точками */
+    width: 20px;
+    /* ширина */
+    height: 8px;
+    /* высота — прямоугольная форма */
+    border-radius: 4px;
+    /* скругление, чтобы было похоже на «капельку» */
+    background-color: rgba(0, 0, 0, 1);
+    /* полупрозрачные для неактивных */
+    margin: 0 5px;
+    /* отступ между точками */
     transition: all 0.3s ease;
 }
 
 /* Активная точка */
 #carouselIllustrations .carousel-indicators .active {
-    width: 30px;           /* шире */
-    height: 10px;          /* выше */
-    background-color: #ffcc00;  /* яркий цвет */
+    width: 30px;
+    /* шире */
+    height: 10px;
+    /* выше */
+    background-color: #ffcc00;
+    /* яркий цвет */
 }
 
 
@@ -212,6 +220,7 @@ body {
     .other_content {
         grid-template-columns: 1fr;
         text-align: center;
+        font-size: 10px;
     }
 
     #about .photo {
