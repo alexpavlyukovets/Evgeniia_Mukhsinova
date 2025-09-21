@@ -67,6 +67,20 @@ body {
     text-align: left;
 }
 
+/* Фото */
+#about .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
 .resume {
     background: #eee;
     color: #111;
@@ -138,109 +152,124 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
     }
-}
 
-/* Базовые стили, sticky и цвета оставляем как раньше */
-
-/* Адаптивность */
-
-/* 1. Большие десктопы > 1440px */
-@media (min-width: 1441px) {
-
-    .about,
-    .resume,
-    .magazines_content,
-    .illustrations_content,
-    .other_content {
-        grid-template-columns: 1fr 1fr;
-        /* 2 колонки */
-        gap: 50px;
+    #about .photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .cover-content h2 {
-        font-size: 96px;
+    #about .photo img {
+        max-width: 400px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
     }
 
-    .about h2,
-    .resume h2 {
-        font-size: 36px;
-    }
-}
+    
 
-/* 2. Стандартные десктопы 1024px – 1440px */
-@media (min-width: 1024px) and (max-width: 1440px) {
+    /* Базовые стили, sticky и цвета оставляем как раньше */
 
-    .about,
-    .resume,
-    .magazines_content,
-    .illustrations_content,
-    .other_content {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
+    /* Адаптивность */
 
-    .cover-content h2 {
-        font-size: 72px;
-    }
+    /* 1. Большие десктопы > 1440px */
+    @media (min-width: 1441px) {
 
-    .about h2,
-    .resume h2 {
-        font-size: 32px;
-    }
-}
+        .about,
+        .resume,
+        .magazines_content,
+        .illustrations_content,
+        .other_content {
+            grid-template-columns: 1fr 1fr;
+            /* 2 колонки */
+            gap: 50px;
+        }
 
-/* 3. Планшеты 768px – 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
+        .cover-content h2 {
+            font-size: 96px;
+        }
 
-    .about,
-    .resume,
-    .magazines_content,
-    .illustrations_content,
-    .other_content {
-        grid-template-columns: 1fr;
-        /* 1 колонка */
-        gap: 30px;
-        text-align: center;
+        .about h2,
+        .resume h2 {
+            font-size: 36px;
+        }
     }
 
-    .cover-content h2 {
-        font-size: 56px;
+    /* 2. Стандартные десктопы 1024px – 1440px */
+    @media (min-width: 1024px) and (max-width: 1440px) {
+
+        .about,
+        .resume,
+        .magazines_content,
+        .illustrations_content,
+        .other_content {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .cover-content h2 {
+            font-size: 72px;
+        }
+
+        .about h2,
+        .resume h2 {
+            font-size: 32px;
+        }
     }
 
-    .about h2,
-    .resume h2 {
-        font-size: 28px;
-    }
-}
+    /* 3. Планшеты 768px – 1023px */
+    @media (min-width: 768px) and (max-width: 1023px) {
 
-/* 4. Мобильные < 768px */
-@media (max-width: 767px) {
+        .about,
+        .resume,
+        .magazines_content,
+        .illustrations_content,
+        .other_content {
+            grid-template-columns: 1fr;
+            /* 1 колонка */
+            gap: 30px;
+            text-align: center;
+        }
 
-    .about,
-    .resume,
-    .magazines_content,
-    .illustrations_content,
-    .other_content {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        text-align: center;
-    }
+        .cover-content h2 {
+            font-size: 56px;
+        }
 
-    .cover-content h2 {
-        font-size: 48px;
-    }
-
-    .cover-content h1 {
-        font-size: 24px;
+        .about h2,
+        .resume h2 {
+            font-size: 28px;
+        }
     }
 
-    .about h2,
-    .resume h2 {
-        font-size: 24px;
-    }
+    /* 4. Мобильные < 768px */
+    @media (max-width: 767px) {
 
-    .nav ul {
-        flex-direction: column;
-        gap: 10px;
+        .about,
+        .resume,
+        .magazines_content,
+        .illustrations_content,
+        .other_content {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .cover-content h2 {
+            font-size: 48px;
+        }
+
+        .cover-content h1 {
+            font-size: 24px;
+        }
+
+        .about h2,
+        .resume h2 {
+            font-size: 24px;
+        }
+
+        .nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
-}
